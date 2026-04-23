@@ -64,28 +64,6 @@ body{background:var(--navy);font-family:'Cormorant Garamond',serif;color:var(--c
 .btn-open:hover{background:var(--gold);color:var(--navy);}
 .btn-open .env{font-size:18px;animation:envPulse 2s infinite;}
 
-.splash-guest{
-  animation:fadeUp 1.1s 0.75s both;
-}
-
-.splash-guest .dear{
-  font-family:'Cormorant Garamond', serif;
-  font-style:italic;
-  font-size:clamp(12px,3vw,14px);
-  color:var(--cream2);
-  letter-spacing:0.15em;
-  display:block;
-  margin-bottom:4px;
-}
-
-#guest-real{
-  font-family:'Marcellus', serif;
-  font-size:clamp(18px,5vw,26px);
-  color:var(--gold2);
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  text-shadow:0 0 20px rgba(201,168,76,0.25);
-}
 /* ══ MAIN ══ */
 #main-content{display:none;opacity:0;transition:opacity 0.9s;}
 #main-content.show{display:block;}
@@ -276,9 +254,9 @@ audio{display:none;}
   <p class="splash-date">Jumat, 15 Mei 2026</p>
 
    <!-- Tamu Undangan -->
- <p id="guest-name" class="splash-guest" style="margin:16px 0 24px;text-align:center;">
-  <span class="dear">Dear</span><br>
-  <span id="guest-real">Tamu Undangan</span>
+ <p id="guest-name" class="splash-names">
+  <span>Dear</span><br>
+  <span>Tamu Undangan</span>
 </p>
 
   <button class="btn-open" onclick="bukaUndangan()">
