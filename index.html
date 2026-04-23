@@ -150,6 +150,7 @@ body{background:var(--navy);font-family:'Cormorant Garamond',serif;color:var(--c
 .gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(20,30,58,0.5),transparent 55%);pointer-events:none;}
 /* Layout sizes */
 .g1{grid-column:span 2;aspect-ratio:16/9;}
+.g1-1{grid-column:span 2;aspect-ratio:4/5;}
 .g2{aspect-ratio:1;}
 .g3{aspect-ratio:1;}
 .g4{grid-column:span 2;aspect-ratio:16/9;}
@@ -206,6 +207,7 @@ audio{display:none;}
   .amp-mid{font-size:60px !important;padding:4px 0 !important;}
   .gallery-grid{grid-template-columns:repeat(2,1fr);}
   .g1,.g4{grid-column:span 2;aspect-ratio:4/3;}
+  .g1-1{grid-column:span 2;aspect-ratio:4/5;}
   .g3,.g5,.g6{aspect-ratio:1;}
 }
 </style>
@@ -389,7 +391,7 @@ audio{display:none;}
       <div class="gallery-grid reveal">
         <!-- ✏️ GANTI setiap src="GANTI_FOTO_GALERI_X.jpg" dengan link foto Anda -->
         <!-- Foto 1 — lebar -->
-        <div class="gallery-item g1" onclick="openLB(this)">
+        <div class="gallery-item g1-1" onclick="openLB(this)">
           <img src="https://raw.githubusercontent.com/datapkm/undangan/refs/heads/main/1.jpeg" alt="Foto 1">
         </div>
         <!-- Foto 2 -->
@@ -398,7 +400,7 @@ audio{display:none;}
         </div>
         <!-- Foto 3 -->
         <div class="gallery-item g3" onclick="openLB(this)">
-          <img src="https://raw.githubusercontent.com/datapkm/undangan/refs/heads/main/3.jpeg" alt="Foto 3">
+          <img src="https://raw.githubusercontent.com/datapkm/undangan/refs/heads/main/3-1.jpeg" alt="Foto 3">
         </div>
         <!-- Foto 4 — lebar -->
         <div class="gallery-item g4" onclick="openLB(this)">
