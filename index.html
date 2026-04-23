@@ -51,7 +51,7 @@ body{background:var(--navy);font-family:'Cormorant Garamond',serif;color:var(--c
 .sc.br{bottom:-8px;right:-8px;border-width:0 2px 2px 0}
 .splash-names{animation:fadeUp 1.1s 0.65s both;}
 .splash-names h1{font-family:'Marcellus',serif;font-size:clamp(36px,10vw,64px);font-weight:400;color:var(--white);line-height:1.05;}
-.splash-names .amp{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(46px,13vw,84px);color:var(--gold);line-height:0.9;display:block;}
+.splash-names .amp{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(46px,13vw,84px);color:var(--gold);line-height:0.9;display:inline;}
 .splash-date{font-size:clamp(12px,3vw,15px);letter-spacing:0.22em;color:var(--cream2);margin:14px 0 24px;animation:fadeUp 1.1s 0.8s both;}
 .btn-open{
   display:inline-flex;align-items:center;gap:10px;
@@ -252,6 +252,15 @@ audio{display:none;}
 
   <!-- ✏️ GANTI tanggal -->
   <p class="splash-date">Jumat, 15 Mei 2026</p>
+
+  <p id="guest-name" style="
+  margin-top:14px;
+  font-size:clamp(13px,3.5vw,16px);
+  color:var(--cream2);
+  letter-spacing:0.08em;
+">
+  Dear Tamu Undangan
+</p>
 
   <button class="btn-open" onclick="bukaUndangan()">
     <span class="env">✉</span> Buka Undangan
@@ -487,6 +496,19 @@ function toggleMusic() {
   }
   playing = !playing;
 }
+
+// ── GET NAMA TAMU DARI URL ──
+function getGuestName() {
+  const params = new URLSearchParams(window.location.search);
+  let name = params.get('to');
+
+  if (name) {
+    name = decodeURIComponent(name.replace(/\+/g, ' '));
+    document.getElementById('guest-name').textContent = "Dear " + name;
+  }
+}
+
+getGuestName();
 
 // ── COUNTDOWN ──
 // ✏️ GANTI tanggal & waktu: 'YYYY-MM-DDTHH:MM:SS'
