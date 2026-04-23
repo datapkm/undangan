@@ -432,6 +432,13 @@ audio{display:none;}
       </div>
     </div>
   </section>
+  
+<!-- end -->
+  <div class="splash-photo">
+    <div class="sc tl"></div><div class="sc tr"></div>
+    <div class="sc bl"></div><div class="sc br"></div>
+    <img src="https://raw.githubusercontent.com/datapkm/undangan/refs/heads/main/end.jpeg" alt="Foto Pasangan">
+  </div>
 
   <!-- ── FOOTER ── -->
   <footer id="footer">
@@ -502,11 +509,6 @@ function openLB(el) {
 }
 function closeLB() { document.getElementById('lightbox').classList.remove('open'); }
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeLB(); });
-
-// ── COPY REKENING ──
-function copyRek(num) {
-  navigator.clipboard.writeText(num).then(() => alert('Nomor berhasil disalin!')).catch(() => {});
-}
 
 // ── SCROLL REVEAL ──
 const obs = new IntersectionObserver(entries => {
